@@ -1,0 +1,123 @@
+@import '../../styles/mixins';
+
+.daily-schedule {
+  display: flex;
+
+  margin-bottom: 4.8em;
+
+  width: 100%;
+
+  &__day {
+    height: 100%;
+    position: sticky;
+
+    top: 10px;
+    left: 0;
+
+    padding-right: 1.1em;
+    margin-right: 3.38em;
+
+    text-align: center;
+
+    border-right: 3px solid var(--extra-light-gray);
+  }
+
+  &__day-of-week, &__week-type {
+    display: inline-block;
+
+    @include adaptive-font(s);
+    color: var(--light-gray);
+  }
+
+  &__day-of-week {
+    line-height: 1.2em;
+  }
+
+  &__week-type {
+    &::before {
+      content: '(';
+    }
+
+    &::after {
+      content: ')';
+    }
+
+    &::before, &::after {
+      font-weight: 300;
+    }
+  }
+
+  &__date {
+    @include adaptive-font(l);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .daily-schedule {
+    &__day {
+      margin-right: 1.5em;
+      padding-right: 0.1em;
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .daily-schedule {
+    flex-direction: column;
+
+    &__date {
+      margin-top: 1px;
+    }
+
+    &__day {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      padding-right: 0;
+      padding-bottom: 0.3em;
+      margin-right: 0;
+      margin-bottom: 0.8em;
+
+      text-align: left;
+      border-right: none;
+      border-bottom: 2px solid var(--extra-light-gray);
+
+      top: 0;
+      padding-top: 0.6em;
+      background-color: var(--main-backbround-color);
+
+    }
+
+    &__day-of-week, &__week-type {
+      font-size: 1.2em;
+      margin-right: 0.5em;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .daily-schedule {
+    margin-bottom: 3.5em;
+    &__list {
+      display: block;
+      li:not(:last-child) {
+        margin-bottom: 0.65em;
+      }
+    }
+
+    &__week-type {
+      &::before, &::after {
+        font-weight: 400;
+      }
+    }
+  }
+}

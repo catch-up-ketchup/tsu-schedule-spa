@@ -1,0 +1,40 @@
+// line-height -> lh
+// font-weight -> fw
+
+$fonts: (
+  xxl: (
+    font-sizes: (pc-size: 64, mob-size: 30),
+    lh: 75.58,
+    fw: 600
+  ),
+
+  xl: (
+    font-sizes: (pc-size: 36, mob-size: 20),
+    lh: 45.54,
+    fw: 600
+  ),
+
+  l: (
+    font-sizes: (pc-size: 24, mob-size: 17),
+    lh: 30.6,
+    fw: 600
+  ),
+
+   m: (
+     font-sizes: (pc-size: 20, mob-size: 16),
+     lh: 33.2,
+     fw: 500
+   ),
+
+   s: (
+     font-sizes: (pc-size: 18, mob-size: 15),
+     lh: 29.88,
+     fw: 500
+   ),
+
+   xs: (
+     font-sizes: (pc-size: 16, mob-size: 14),
+     lh: 26.56,
+     fw: 500
+   )
+);

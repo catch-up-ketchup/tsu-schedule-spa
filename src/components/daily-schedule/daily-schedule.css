@@ -1,0 +1,96 @@
+.daily-schedule {
+  display: flex;
+  margin-bottom: 4.8em;
+  width: 100%;
+}
+.daily-schedule__day {
+  height: 100%;
+  position: sticky;
+  top: 10px;
+  left: 0;
+  padding-right: 1.1em;
+  margin-right: 3.38em;
+  text-align: center;
+  border-right: 3px solid var(--extra-light-gray);
+}
+.daily-schedule__day-of-week, .daily-schedule__week-type {
+  display: inline-block;
+  font-size: calc(15px + 3 * ((100vw - 320px) / 1600));
+  font-weight: 500;
+  line-height: 1.66em;
+  color: var(--light-gray);
+}
+.daily-schedule__day-of-week {
+  line-height: 1.2em;
+}
+.daily-schedule__week-type::before {
+  content: "(";
+}
+.daily-schedule__week-type::after {
+  content: ")";
+}
+.daily-schedule__week-type::before, .daily-schedule__week-type::after {
+  font-weight: 300;
+}
+.daily-schedule__date {
+  font-size: calc(17px + 7 * ((100vw - 320px) / 1600));
+  font-weight: 600;
+  line-height: 1.275em;
+}
+.daily-schedule__list {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 15px;
+}
+
+@media (max-width: 1300px) {
+  .daily-schedule__day {
+    margin-right: 1.5em;
+    padding-right: 0.1em;
+  }
+}
+@media (max-width: 1140px) {
+  .daily-schedule {
+    flex-direction: column;
+  }
+  .daily-schedule__date {
+    margin-top: 1px;
+  }
+  .daily-schedule__day {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 0;
+    padding-bottom: 0.3em;
+    margin-right: 0;
+    margin-bottom: 0.8em;
+    text-align: left;
+    border-right: none;
+    border-bottom: 2px solid var(--extra-light-gray);
+    top: 0;
+    padding-top: 0.6em;
+    background-color: var(--main-backbround-color);
+  }
+  .daily-schedule__day-of-week, .daily-schedule__week-type {
+    font-size: 1.2em;
+    margin-right: 0.5em;
+  }
+}
+@media (max-width: 767.98px) {
+  .daily-schedule {
+    margin-bottom: 3.5em;
+  }
+  .daily-schedule__list {
+    display: block;
+  }
+  .daily-schedule__list li:not(:last-child) {
+    margin-bottom: 0.65em;
+  }
+  .daily-schedule__week-type::before, .daily-schedule__week-type::after {
+    font-weight: 400;
+  }
+}
+
+/*# sourceMappingURL=daily-schedule.css.map */

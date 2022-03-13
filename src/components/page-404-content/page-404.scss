@@ -1,0 +1,67 @@
+@import "../../styles/mixins";
+
+.page-404 {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background-color: var(--main-blue-light);
+
+  &__image {
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+
+  &__icon {
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 500ms;
+
+    svg {
+      color: var(--main-white);
+      font-size: 10em;
+    }
+  }
+
+  &__icon_rotate {
+    transform: rotate(360deg);
+  }
+
+  &__title {
+    @include adaptive-font(xxl);
+    text-align: center;
+    color: var(--main-white);
+  }
+
+  &__text {
+    max-width: 402px;
+    margin: 0 auto 40px auto;
+
+    @include adaptive-font(m);
+    line-height: 1.66em;
+    color: var(--main-white);
+  }
+
+  &__link {
+    padding: 0.3em 1.1em;
+    box-sizing: border-box;
+
+    @include adaptive-font(l);
+
+    background-color: var(--main-white);
+    box-shadow: 0px 4px 19px var(--shadow);
+    border-radius: 80px;
+
+    transition: all var(--animation-duration);
+
+    &:hover {
+      color: var(--main-white);
+      background: var(--main-blue-dark);
+    }
+  }
+}

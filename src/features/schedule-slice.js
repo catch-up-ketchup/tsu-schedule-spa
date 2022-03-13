@@ -1,0 +1,56 @@
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
+import { scheduleService } from "../services";
+
+
+export const fetchSchedule = createAsyncThunk(
+  'schedule/fetchSchedule',
+  async (group, { rejectWithValue }) => {
+    try {
+      return await scheduleService.getSchedule(group);
+    } catch (err) {
+      return rejectWithValue(err);
+    }
+  }
+);
+
+const initialState = {
+  schedule: [],
+  group: localStorage.getItem('group'),
+  loading: false,
+  error: null,
+};
+
+const scheduleSlice = createSlice({
+  name: 'schedule',
+  initialState,
+  extraReducers: {
+    [fetchSchedule.pending]: (state, action) => {
+      state.schedule = [];
+      state.group = null;
+      state.loading = true;
+      state.error = null;
+    },
+
+    [fetchSchedule.fulfilled]: (state, action) => {
+      const { schedule, group } = action.payload;
+
+      state.schedule = schedule;
+      state.group = group;
+
+      localStorage.setItem('group', group);
+
+      state.loading = false;
+      state.error = null;
+    },
+
+    [fetchSchedule.rejected]: (state, action) => {
+      state.schedule = [];
+      state.group = null
+      state.loading = false;
+      state.error = action.payload;
+    }
+  }
+});
+
+export default scheduleSlice.reducer;

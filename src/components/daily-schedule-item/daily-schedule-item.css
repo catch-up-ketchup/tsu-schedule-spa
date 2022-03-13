@@ -1,0 +1,90 @@
+.daily-schedule-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 480px;
+  padding: 1.5em 3.27em;
+  border-radius: 27px;
+}
+.daily-schedule-item__row:first-child {
+  margin-bottom: 1.48em;
+}
+.daily-schedule-item__subject {
+  font-size: calc(17px + 7 * ((100vw - 320px) / 1600));
+  font-weight: 600;
+  line-height: 1.275em;
+}
+.daily-schedule-item__info {
+  display: flex;
+  margin-bottom: 0.8em;
+}
+.daily-schedule-item__time, .daily-schedule-item__auditorium, .daily-schedule-item__teacher {
+  display: flex;
+  align-items: center;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+  font-weight: 500;
+  line-height: 1.66em;
+  font-weight: 400;
+  color: var(--dark-gray);
+}
+.daily-schedule-item__time svg, .daily-schedule-item__auditorium svg, .daily-schedule-item__teacher svg {
+  margin-right: 7px;
+}
+.daily-schedule-item__auditorium svg {
+  margin-bottom: 2px;
+}
+.daily-schedule-item__time svg, .daily-schedule-item__teacher svg {
+  margin-bottom: 1px;
+}
+.daily-schedule-item__time {
+  margin-right: 1.48em;
+}
+.daily-schedule-item_laboratory-work {
+  background-color: var(--light-green);
+}
+.daily-schedule-item_laboratory-work .daily-schedule-item__type {
+  color: var(--dark-green);
+}
+.daily-schedule-item_practice {
+  background-color: var(--light-pink);
+}
+.daily-schedule-item_practice .daily-schedule-item__type {
+  color: var(--dark-pink);
+}
+.daily-schedule-item_lecture {
+  background-color: var(--light-blue);
+}
+.daily-schedule-item_lecture .daily-schedule-item__type {
+  color: var(--dark-blue);
+}
+.daily-schedule-item_another {
+  background-color: var(--light-ginger);
+}
+.daily-schedule-item_another .daily-schedule-item__type {
+  color: var(--dark-ginger);
+}
+
+@media (max-width: 1140px) {
+  .daily-schedule-item {
+    min-width: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .daily-schedule-item {
+    padding: 0.8em 1.2em 1.1em;
+  }
+}
+@media (max-width: 575.98px) {
+  .daily-schedule-item {
+    border-radius: 15px;
+  }
+  .daily-schedule-item__row:first-child {
+    margin-bottom: 1.1em;
+  }
+
+  .daily-schedule-item__info {
+    margin-bottom: 0.3em;
+  }
+}
+
+/*# sourceMappingURL=daily-schedule-item.css.map */

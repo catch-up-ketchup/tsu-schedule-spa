@@ -1,0 +1,58 @@
+@import '../../styles/mixins';
+
+.schedule {
+  &__title {
+    padding-top: 48px;
+
+    @include adaptive-font(xl);
+
+    margin-bottom: 1.5em;
+  }
+
+  &__button {
+    @include adaptive-font(xl);
+
+    position: fixed;
+    bottom: 0.7em;
+    right: 1.5em;
+
+    $max-size: 60px;
+    max-width: $max-size;
+    max-height: $max-size;
+
+    $size: 1.8em;
+    width: $size;
+    height: $size;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 1256px) {
+  .schedule {
+    &__title {
+      padding-top: 38px;
+      margin-bottom: 1.2em;
+    }
+  }
+}
+
+@media (max-width: 585px) {
+  .schedule {
+    &__title {
+      padding-top: 25px;
+      margin-bottom: 1.8em;
+    }
+
+    &__button {
+      @include adaptive-font(xxl);
+
+      bottom: 13px;
+      right: 13px;
+    }
+  }
+}

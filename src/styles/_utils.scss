@@ -1,0 +1,23 @@
+@import "_fonts";
+
+
+// --------------------------- font field getters ---------------------------
+
+// $fonts is taken from _fonts.scss
+
+@function get-pc-size($font) {
+  @return map-get(map-get(map-get($fonts, $font), font-sizes), pc-size);
+}
+
+@function get-mob-size($font) {
+  @return map-get(map-get(map-get($fonts, $font), font-sizes), mob-size);
+}
+
+@function get-line-height($font) {
+  @return map-get(map-get($fonts, $font), lh);
+}
+
+@function get-font-weight($font) {
+  @return map-get(map-get($fonts, $font), fw);
+}
+

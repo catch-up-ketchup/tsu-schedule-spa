@@ -1,0 +1,111 @@
+//----------------------- null style -----------------------
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,*::before,*::after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer; background-color: transparent;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a,a:visited{text-decoration: none;}
+a{color: #000}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;width: 100%;}
+h2 {font-size: 1em}
+
+//----------------------- custom general styles -----------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;900&display=swap');
+@import '_fonts';
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+
+  --animation-duration: 300ms;
+
+  --main-blue-extra-light: #6281FF;
+  --main-blue-light: #4C6FFF;
+  --main-blue-dark: #2041C8;
+
+  --main-red: #e83256;
+  --main-white: #f1e9e9;
+
+  --main-backbround-color: #fff;
+
+  --extra-light-gray: #C4C4C4;
+  --light-gray: #AEAEAE;
+  --dark-gray: #717171;
+  --extra-dark-gray: rgba(180, 180, 180, 0.27);
+
+  --light-pink: #f6e7fd;
+  --dark-pink: #dc6bf3;
+
+  --light-blue: #E3E8FC;
+  --dark-blue: #6181e0;
+
+  --light-green: #DFFEEE;
+  --dark-green: #56af8f;
+
+  --light-ginger: #F7EDDA;
+  --dark-ginger: #C08D28;
+
+  --shadow: rgba(120, 118, 118, 0.14);
+}
+
+.container {
+  max-width: 1210px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.blue-button {
+  color: var(--main-white);
+  box-shadow: 0 4px 19px var(--shadow);
+  background: var(--main-blue-light);
+
+  transition: background-color var(--animation-duration);
+
+  &:hover {
+    background-color: var(--main-blue-dark);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
+//----------------------- page styles -----------------------
+
+.schedule-page {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,58 @@
+@import '../../styles/mixins';
+
+.input-field {
+  display: block;
+  position: relative;
+
+  &__label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    @include adaptive-font(s);
+
+    transition: color var(--animation-duration);
+    color: var(--light-gray);
+  }
+
+  &:focus-within {
+    .input-field__label {
+      color: var(--main-blue-extra-light);
+    }
+  }
+
+  &__input {
+    width: 100%;
+
+    padding: 0.25em 0.63em;
+
+    @include adaptive-font(m);
+
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+
+    transition: border var(--animation-duration);
+
+    &::placeholder {
+      color: var(--extra-light-gray);
+    }
+
+    &:focus {
+      border: 1px solid var(--main-blue-extra-light);
+    }
+  }
+}
+
+.valid-error {
+  &:focus-within {
+    .input-field__label {
+      color: var(--main-red);
+    }
+  }
+
+  .input-field__input {
+    &:focus {
+      border: 1px solid var(--main-red);
+    }
+  }
+}

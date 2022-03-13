@@ -1,0 +1,27 @@
+@import "_utils";
+
+//-------------------------------- adaptive font --------------------------------
+
+$layout-width: 1920;
+
+@mixin adaptive-font($font, $font-weight: null, $line-height: null) {
+  $pc-size: get-pc-size($font);
+  $mob-size: get-mob-size($font);
+
+  $add-size: $pc-size - $mob-size;
+  $max-width: $layout-width - 320;
+
+  font-size: calc(#{$mob-size + px} + #{$add-size} * ((100vw - 320px) / #{$max-width}));
+
+  @if $font-weight {
+    font-weight: $font-weight;
+  } @else {
+    font-weight: get-font-weight($font);
+  }
+
+  @if $line-height {
+    line-height: $line-height;
+  } @else {
+    line-height: #{get-line-height($font) / $pc-size}em;
+  }
+}
