@@ -2,6 +2,8 @@
 
 
 .daily-schedule-item {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -84,17 +86,86 @@
       color: var(--dark-ginger);
     }
   }
+
+  &_is-going {
+    &::before {
+      content: '';
+      @include adaptive-font(xxl);
+
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      $size: 0.27em;
+      width:$size;
+      height: $size;
+
+      border-radius: 50%;
+
+      -webkit-animation: radial-pulse 1s infinite;
+      animation: radial-pulse 1s infinite;
+    }
+  }
+}
+
+.daily-schedule-item.daily-schedule-item_laboratory-work.daily-schedule-item_is-going {
+  &::before {
+    color: var(--dark-green-translucent);
+    background-color: var(--dark-green);
+  }
+}
+
+.daily-schedule-item.daily-schedule-item_practice.daily-schedule-item_is-going {
+  &::before {
+    color: var(--dark-pink-translucent);
+    background-color: var(--dark-pink);
+  }
+}
+
+.daily-schedule-item.daily-schedule-item_lecture.daily-schedule-item_is-going {
+  &::before {
+    color: var(--dark-blue-translucent);
+    background-color: var(--dark-blue);
+  }
+}
+
+.daily-schedule-item.daily-schedule-item_another.daily-schedule-item_is-going {
+  &::before {
+    color: var(--dark-ginger-translucent);
+    background-color: var(--dark-ginger);
+  }
+}
+
+@keyframes radial-pulse {
+  0% { box-shadow: 0 0 0 0px currentColor; }
+  100% { box-shadow: 0 0 0 0.22em rgba(211, 196, 196, 0); }
 }
 
 @media (max-width: 1140px) {
   .daily-schedule-item {
     min-width: auto;
+
+    &_is-going {
+      &::before {
+        $size: 0.36em;
+        width: $size;
+        height: $size;
+      }
+    }
   }
 }
 
 @media (max-width: 767.98px) {
   .daily-schedule-item {
     padding: 0.8em 1.2em 1.1em;
+
+    &_is-going {
+      &::before {
+        $size: 0.4em;
+        width: $size;
+        height: $size;
+      }
+    }
   }
 }
 
@@ -107,11 +178,20 @@
         margin-bottom: 1.1em;
       }
     }
-  }
 
-  .daily-schedule-item {
     &__info {
       margin-bottom: 0.3em;
+    }
+
+    &_is-going {
+      &::before {
+        $size: 0.4em;
+        width: $size;
+        height: $size;
+
+        right: -2px;
+        top: -2px;
+      }
     }
   }
 }

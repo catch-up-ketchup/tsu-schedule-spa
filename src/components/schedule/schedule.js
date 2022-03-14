@@ -3,7 +3,7 @@ import { FiAnchor } from "react-icons/all";
 import { v4 } from "uuid";
 
 import DailySchedule from "../daily-schedule";
-import { getItemIdxWithTodayDate, scrollToNthChild } from '../../utils';
+import { scrollToNthChild, getNearestStudyDayIdx } from '../../utils';
 
 import './schedule.scss';
 
@@ -11,7 +11,7 @@ import './schedule.scss';
 const Schedule = ({ schedule, group }) => {
 
   const handleClick = useCallback(() => {
-    const idx = getItemIdxWithTodayDate(schedule);
+    const idx = getNearestStudyDayIdx(schedule);
     scrollToNthChild('daily-schedule', idx + 1);
   }, [schedule]);
 

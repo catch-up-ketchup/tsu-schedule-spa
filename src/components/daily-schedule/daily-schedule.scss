@@ -13,6 +13,7 @@
 
     top: 10px;
     left: 0;
+    z-index: 1;
 
     padding-right: 1.1em;
     margin-right: 3.38em;
@@ -85,7 +86,7 @@
       padding-right: 0;
       padding-bottom: 0.3em;
       margin-right: 0;
-      margin-bottom: 0.8em;
+      margin-bottom: 1.2em;
 
       text-align: left;
       border-right: none;
@@ -107,6 +108,11 @@
 @media (max-width: 767.98px) {
   .daily-schedule {
     margin-bottom: 3.5em;
+
+    &__day {
+      margin-bottom: 0.7em;
+    }
+
     &__list {
       display: block;
       li:not(:last-child) {

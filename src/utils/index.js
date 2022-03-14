@@ -1,15 +1,17 @@
 import blockClick from "./block-click";
-import getItemSafely from "./get-item-safely";
+import isTodayDate from "./is-today-date";
 import toggleClass from "./toggle-class";
 import scrollToNthChild from "./scroll-to-hth-child";
-import getItemIdxWithTodayDate from "./get-item-idx-with-today-date";
 import createSubgroupString from "./create-subgroup-string";
+import getNearestStudyDayIdx from "./get-nearest-study-day-idx";
+import isCurrentTimeInInterval from "./is-current-time-in-interval";
 
 export {
   blockClick,
-  getItemSafely,
+  isTodayDate,
   toggleClass,
   scrollToNthChild,
-  getItemIdxWithTodayDate,
-  createSubgroupString
+  createSubgroupString,
+  getNearestStudyDayIdx,
+  isCurrentTimeInInterval
 };

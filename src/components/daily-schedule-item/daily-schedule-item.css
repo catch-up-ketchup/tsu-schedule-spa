@@ -1,4 +1,5 @@
 .daily-schedule-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -63,15 +64,65 @@
 .daily-schedule-item_another .daily-schedule-item__type {
   color: var(--dark-ginger);
 }
+.daily-schedule-item_is-going::before {
+  content: "";
+  font-size: calc(30px + 34 * ((100vw - 320px) / 1600));
+  font-weight: 600;
+  line-height: 1.1809375em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0.27em;
+  height: 0.27em;
+  border-radius: 50%;
+  -webkit-animation: radial-pulse 1s infinite;
+  animation: radial-pulse 1s infinite;
+}
 
+.daily-schedule-item.daily-schedule-item_laboratory-work.daily-schedule-item_is-going::before {
+  color: var(--dark-green-translucent);
+  background-color: var(--dark-green);
+}
+
+.daily-schedule-item.daily-schedule-item_practice.daily-schedule-item_is-going::before {
+  color: var(--dark-pink-translucent);
+  background-color: var(--dark-pink);
+}
+
+.daily-schedule-item.daily-schedule-item_lecture.daily-schedule-item_is-going::before {
+  color: var(--dark-blue-translucent);
+  background-color: var(--dark-blue);
+}
+
+.daily-schedule-item.daily-schedule-item_another.daily-schedule-item_is-going::before {
+  color: var(--dark-ginger-translucent);
+  background-color: var(--dark-ginger);
+}
+
+@keyframes radial-pulse {
+  0% {
+    box-shadow: 0 0 0 0px currentColor;
+  }
+  100% {
+    box-shadow: 0 0 0 0.22em rgba(211, 196, 196, 0);
+  }
+}
 @media (max-width: 1140px) {
   .daily-schedule-item {
     min-width: auto;
+  }
+  .daily-schedule-item_is-going::before {
+    width: 0.36em;
+    height: 0.36em;
   }
 }
 @media (max-width: 767.98px) {
   .daily-schedule-item {
     padding: 0.8em 1.2em 1.1em;
+  }
+  .daily-schedule-item_is-going::before {
+    width: 0.4em;
+    height: 0.4em;
   }
 }
 @media (max-width: 575.98px) {
@@ -81,9 +132,14 @@
   .daily-schedule-item__row:first-child {
     margin-bottom: 1.1em;
   }
-
   .daily-schedule-item__info {
     margin-bottom: 0.3em;
+  }
+  .daily-schedule-item_is-going::before {
+    width: 0.4em;
+    height: 0.4em;
+    right: -2px;
+    top: -2px;
   }
 }
 

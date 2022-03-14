@@ -8,6 +8,7 @@
   position: sticky;
   top: 10px;
   left: 0;
+  z-index: 1;
   padding-right: 1.1em;
   margin-right: 3.38em;
   text-align: center;
@@ -65,7 +66,7 @@
     padding-right: 0;
     padding-bottom: 0.3em;
     margin-right: 0;
-    margin-bottom: 0.8em;
+    margin-bottom: 1.2em;
     text-align: left;
     border-right: none;
     border-bottom: 2px solid var(--extra-light-gray);
@@ -81,6 +82,9 @@
 @media (max-width: 767.98px) {
   .daily-schedule {
     margin-bottom: 3.5em;
+  }
+  .daily-schedule__day {
+    margin-bottom: 0.7em;
   }
   .daily-schedule__list {
     display: block;
