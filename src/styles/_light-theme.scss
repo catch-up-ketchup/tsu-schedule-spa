@@ -1,0 +1,37 @@
+:root {
+  @media (prefers-color-scheme: light) {
+    --color-day-border: #C4C4C4;
+    --color-light-text: #AEAEAE;
+    --color-class-info: #717171;
+    --color-search-form-border: rgba(180, 180, 180, 0.27);
+
+    --color-main-background: #fff;
+    --color-button-text: #f1e9e9;
+
+    --color-main-extra-light: #6281FF;
+    --color-main-light: #4C6FFF;
+    --color-main-dark: #2041C8;
+
+    --color-error: #e83256;
+
+    --color-practice-background: #f6e7fd;
+    --color-practice-accent: #dc6bf3;
+    --color-practice-shadow: rgba(220, 107, 243, 0.6);
+
+    --color-lecture-background: #E3E8FC;
+    --color-lecture-accent: #6181e0;
+    --color-lecture-shadow: rgba(97, 129, 224, 0.5);
+
+    --color-laboratory-work-background: #d6f3e4;
+    --color-laboratory-work-accent: #56af8f;
+    --color-laboratory-work-shadow: rgba(86, 175, 143, 0.5);
+
+    --color-another-background: #F7EDDA;
+    --color-another-accent: #C08D28;
+    --color-another-shadow: rgba(192, 141, 40, 0.5);
+
+    --color-going-class-pulse: rgba(211, 196, 196, 0);
+
+    --color-shadow: rgba(120, 118, 118, 0.14);
+  }
+}

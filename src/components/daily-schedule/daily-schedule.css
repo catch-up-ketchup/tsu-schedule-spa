@@ -12,14 +12,14 @@
   padding-right: 1.1em;
   margin-right: 3.38em;
   text-align: center;
-  border-right: 3px solid var(--extra-light-gray);
+  border-right: 3px solid var(--color-day-border);
 }
 .daily-schedule__day-of-week, .daily-schedule__week-type {
-  display: inline-block;
+  display: block;
   font-size: calc(15px + 3 * ((100vw - 320px) / 1600));
   font-weight: 500;
   line-height: 1.66em;
-  color: var(--light-gray);
+  color: var(--color-light-text);
 }
 .daily-schedule__day-of-week {
   line-height: 1.2em;
@@ -67,14 +67,14 @@
     border-right: none;
     padding: 0.6em 30px 0;
     top: 0;
-    background-color: var(--main-backbround-color);
+    background-color: var(--color-main-background);
   }
   .daily-schedule__day-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-bottom: 0.6em;
-    border-bottom: 2px solid var(--extra-light-gray);
+    border-bottom: 2px solid var(--color-day-border);
   }
   .daily-schedule__day-of-week, .daily-schedule__week-type {
     font-size: 1.2em;

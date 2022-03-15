@@ -9,10 +9,10 @@
   font-weight: 500;
   line-height: 1.66em;
   transition: color var(--animation-duration);
-  color: var(--light-gray);
+  color: var(--color-light-text);
 }
 .input-field:focus-within .input-field__label {
-  color: var(--main-blue-extra-light);
+  color: var(--color-main-extra-light);
 }
 .input-field__input {
   width: 100%;
@@ -20,22 +20,29 @@
   font-size: calc(16px + 4 * ((100vw - 320px) / 1600));
   font-weight: 500;
   line-height: 1.66em;
-  border: 1px solid var(--light-gray);
+  color: var(--color-main-text);
+  border: 1px solid var(--color-light-text);
   border-radius: 10px;
   transition: border var(--animation-duration);
+  background-color: var(--color-main-background);
 }
 .input-field__input::placeholder {
-  color: var(--extra-light-gray);
+  color: var(--color-day-border);
+}
+@media (prefers-color-scheme: dark) {
+  .input-field__input::placeholder {
+    color: var(--color-search-form-border);
+  }
 }
 .input-field__input:focus {
-  border: 1px solid var(--main-blue-extra-light);
+  border: 1px solid var(--color-main-extra-light);
 }
 
 .valid-error:focus-within .input-field__label {
-  color: var(--main-red);
+  color: var(--color-error);
 }
 .valid-error .input-field__input:focus {
-  border: 1px solid var(--main-red);
+  border: 1px solid var(--color-error);
 }
 
 /*# sourceMappingURL=input-field.css.map */

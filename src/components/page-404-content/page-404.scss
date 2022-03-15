@@ -10,7 +10,7 @@
 
   text-align: center;
 
-  background-color: var(--main-blue-light);
+  background-color: var(--color-main-light);
 
   &__image {
     max-width: 300px;
@@ -23,7 +23,7 @@
     transition: transform 500ms;
 
     svg {
-      color: var(--main-white);
+      color: var(--color-button-text);
       font-size: 10em;
     }
   }
@@ -35,7 +35,7 @@
   &__title {
     @include adaptive-font(xxl);
     text-align: center;
-    color: var(--main-white);
+    color: var(--color-button-text);
   }
 
   &__text {
@@ -44,7 +44,7 @@
 
     @include adaptive-font(m);
     line-height: 1.66em;
-    color: var(--main-white);
+    color: var(--color-button-text);
   }
 
   &__link {
@@ -53,15 +53,15 @@
 
     @include adaptive-font(l);
 
-    background-color: var(--main-white);
+    background-color: var(--color-button-text);
     box-shadow: 0px 4px 19px var(--shadow);
     border-radius: 80px;
 
     transition: all var(--animation-duration);
 
     &:hover {
-      color: var(--main-white);
-      background: var(--main-blue-dark);
+      color: var(--color-button-text);
+      background: var(--color-main-dark);
     }
   }
 }

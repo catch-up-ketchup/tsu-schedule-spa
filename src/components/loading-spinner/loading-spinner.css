@@ -24,7 +24,7 @@
   line-height: 1.265em;
   width: 4.3em;
   height: 4.3em;
-  border: 0.5em solid var(--main-blue-light);
+  border: 0.5em solid var(--color-main-light);
   border-top-color: transparent;
   border-radius: 50%;
 }

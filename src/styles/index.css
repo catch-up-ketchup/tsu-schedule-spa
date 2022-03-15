@@ -76,32 +76,73 @@ h2 {
   font-size: 1em;
 }
 
-body {
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-day-border: #C4C4C4;
+    --color-light-text: #AEAEAE;
+    --color-class-info: #717171;
+    --color-search-form-border: rgba(180, 180, 180, 0.27);
+    --color-main-background: #fff;
+    --color-button-text: #f1e9e9;
+    --color-main-extra-light: #6281FF;
+    --color-main-light: #4C6FFF;
+    --color-main-dark: #2041C8;
+    --color-error: #e83256;
+    --color-practice-background: #f6e7fd;
+    --color-practice-accent: #dc6bf3;
+    --color-practice-shadow: rgba(220, 107, 243, 0.6);
+    --color-lecture-background: #E3E8FC;
+    --color-lecture-accent: #6181e0;
+    --color-lecture-shadow: rgba(97, 129, 224, 0.5);
+    --color-laboratory-work-background: #d6f3e4;
+    --color-laboratory-work-accent: #56af8f;
+    --color-laboratory-work-shadow: rgba(86, 175, 143, 0.5);
+    --color-another-background: #F7EDDA;
+    --color-another-accent: #C08D28;
+    --color-another-shadow: rgba(192, 141, 40, 0.5);
+    --color-going-class-pulse: rgba(211, 196, 196, 0);
+    --color-shadow: rgba(120, 118, 118, 0.14);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-day-border: #C4C4C4;
+    --color-light-text: #bbbaba;
+    --color-class-info: #d5d4d4;
+    --color-search-form-border: rgba(255, 255, 255, 0.40);
+    --color-main-background: #202124;
+    --color-main-text: #f3f1f1;
+    --color-button-text: #f1e9e9;
+    --color-main-extra-light: #2caab9;
+    --color-main-light: #1996a6;
+    --color-main-dark: #087886;
+    --color-error: #c94552;
+    --color-practice-background: rgba(155, 100, 245, 0.3);
+    --color-practice-accent: rgb(164, 119, 236);
+    --color-practice-shadow: rgba(163, 151, 215, 0.6);
+    --color-lecture-background: rgba(58, 128, 225, 0.45);
+    --color-lecture-accent: rgb(139, 179, 238);
+    --color-lecture-shadow: rgba(143, 170, 218, 0.5);
+    --color-laboratory-work-background: rgba(42, 218, 115, 0.3);
+    --color-laboratory-work-accent: rgb(98, 190, 135);
+    --color-laboratory-work-shadow: rgba(150, 208, 155, 0.5);
+    --color-another-background: #F7EDDA;
+    --color-another-accent: #C08D28;
+    --color-another-shadow: rgba(192, 141, 40, 0.5);
+    --color-going-class-pulse: rgba(211, 196, 196, 0);
+    --color-shadow: rgba(152, 151, 151, 0.14);
+  }
+}
+
+:root {
   font-family: "Be Vietnam Pro", sans-serif;
   --animation-duration: 300ms;
-  --main-blue-extra-light: #6281FF;
-  --main-blue-light: #4C6FFF;
-  --main-blue-dark: #2041C8;
-  --main-red: #e83256;
-  --main-white: #f1e9e9;
-  --main-backbround-color: #fff;
-  --extra-light-gray: #C4C4C4;
-  --light-gray: #AEAEAE;
-  --dark-gray: #717171;
-  --extra-dark-gray: rgba(180, 180, 180, 0.27);
-  --light-pink: #f6e7fd;
-  --dark-pink: #dc6bf3;
-  --dark-pink-translucent: rgba(220, 107, 243, 0.6);
-  --light-blue: #E3E8FC;
-  --dark-blue: #6181e0;
-  --dark-blue-translucent: rgba(97, 129, 224, 0.5);
-  --light-green: #DFFEEE;
-  --dark-green: #56af8f;
-  --dark-green-translucent: rgba(86, 175, 143, 0.5);
-  --light-ginger: #F7EDDA;
-  --dark-ginger: #C08D28;
-  --dark-ginger-translucent: rgba(192, 141, 40, 0.5);
-  --shadow: rgba(120, 118, 118, 0.14);
+}
+
+body {
+  background-color: var(--color-main-background);
+  color: var(--color-main-text);
 }
 
 .container {
@@ -111,13 +152,13 @@ body {
 }
 
 .blue-button {
-  color: var(--main-white);
-  box-shadow: 0 4px 19px var(--shadow);
-  background: var(--main-blue-light);
+  color: var(--color-button-text);
+  box-shadow: 0 4px 19px var(--color-shadow);
+  background: var(--color-main-light);
   transition: background-color var(--animation-duration);
 }
 .blue-button:hover {
-  background-color: var(--main-blue-dark);
+  background-color: var(--color-main-dark);
 }
 
 @media (max-width: 575.98px) {
@@ -126,7 +167,7 @@ body {
   }
 
   .blue-button:hover {
-    background: var(--main-blue-light);
+    background: var(--color-main-light);
   }
 }
 .schedule-page {

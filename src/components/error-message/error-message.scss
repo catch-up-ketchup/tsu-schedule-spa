@@ -13,7 +13,7 @@
     padding: 1em 2em;
     display: inline-block;
 
-    border: 2px solid var(--main-red);
+    border: 2px solid var(--color-error);
     border-radius: 10px;
   }
 
@@ -23,7 +23,7 @@
     display: inline-flex;
     align-items: center;
 
-    color: var(--main-red);
+    color: var(--color-error);
   }
 
   &__title {
@@ -37,7 +37,7 @@
   &__text {
     @include adaptive-font(m);
 
-    color: var(--dark-gray);
+    color: var(--color-class-info);
   }
 }
 

@@ -42,43 +42,17 @@ h2 {font-size: 1em}
 
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;900&display=swap');
 @import '_fonts';
+@import '_light-theme';
+@import '_dark-theme';
+
+:root {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  --animation-duration: 300ms;
+}
 
 body {
-  font-family: 'Be Vietnam Pro', sans-serif;
-
-  --animation-duration: 300ms;
-
-  --main-blue-extra-light: #6281FF;
-  --main-blue-light: #4C6FFF;
-  --main-blue-dark: #2041C8;
-
-  --main-red: #e83256;
-  --main-white: #f1e9e9;
-
-  --main-backbround-color: #fff;
-
-  --extra-light-gray: #C4C4C4;
-  --light-gray: #AEAEAE;
-  --dark-gray: #717171;
-  --extra-dark-gray: rgba(180, 180, 180, 0.27);
-
-  --light-pink: #f6e7fd;
-  --dark-pink: #dc6bf3;
-  --dark-pink-translucent: rgba(220, 107, 243, 0.6);
-
-  --light-blue: #E3E8FC;
-  --dark-blue: #6181e0;
-  --dark-blue-translucent: rgba(97, 129, 224, 0.5);
-
-  --light-green: #DFFEEE;
-  --dark-green: #56af8f;
-  --dark-green-translucent: rgba(86, 175, 143, 0.5);
-
-  --light-ginger: #F7EDDA;
-  --dark-ginger: #C08D28;
-  --dark-ginger-translucent: rgba(192, 141, 40, 0.5);
-
-  --shadow: rgba(120, 118, 118, 0.14);
+  background-color: var(--color-main-background);
+  color: var(--color-main-text);
 }
 
 .container {
@@ -88,14 +62,14 @@ body {
 }
 
 .blue-button {
-  color: var(--main-white);
-  box-shadow: 0 4px 19px var(--shadow);
-  background: var(--main-blue-light);
+  color: var(--color-button-text);
+  box-shadow: 0 4px 19px var(--color-shadow);
+  background: var(--color-main-light);
 
   transition: background-color var(--animation-duration);
 
   &:hover {
-    background-color: var(--main-blue-dark);
+    background-color: var(--color-main-dark);
   }
 }
 
@@ -106,7 +80,7 @@ body {
 
   .blue-button {
     &:hover {
-      background: var(--main-blue-light);
+      background: var(--color-main-light);
     }
   }
 }

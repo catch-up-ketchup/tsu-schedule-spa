@@ -36,7 +36,7 @@
     @include adaptive-font(xs);
     font-weight: 400;
 
-    color: var(--dark-gray);
+    color: var(--color-class-info);
 
     svg {
       margin-right: 7px;
@@ -60,30 +60,30 @@
   }
 
   &_laboratory-work {
-    background-color: var(--light-green);
+    background-color: var(--color-laboratory-work-background);
     .daily-schedule-item__type {
-      color: var(--dark-green);
+      color: var(--color-laboratory-work-accent);
     }
   }
 
   &_practice {
-    background-color: var(--light-pink);
+    background-color: var(--color-practice-background);
     .daily-schedule-item__type {
-      color: var(--dark-pink);
+      color: var(--color-practice-accent);
     }
   }
 
   &_lecture {
-    background-color: var(--light-blue);
+    background-color: var(--color-lecture-background);
     .daily-schedule-item__type {
-      color: var(--dark-blue);
+      color: var(--color-lecture-accent);
     }
   }
 
   &_another {
-    background-color: var(--light-ginger);
+    background-color: var(--color-another-background);
     .daily-schedule-item__type {
-      color: var(--dark-ginger);
+      color: var(--color-another-accent);
     }
   }
 
@@ -110,35 +110,35 @@
 
 .daily-schedule-item.daily-schedule-item_laboratory-work.daily-schedule-item_is-going {
   &::before {
-    color: var(--dark-green-translucent);
-    background-color: var(--dark-green);
+    color: var(--color-laboratory-work-shadow);
+    background-color: var(--color-laboratory-work-accent);
   }
 }
 
 .daily-schedule-item.daily-schedule-item_practice.daily-schedule-item_is-going {
   &::before {
-    color: var(--dark-pink-translucent);
-    background-color: var(--dark-pink);
+    color: var(--color-practice-shadow);
+    background-color: var(--color-practice-accent);
   }
 }
 
 .daily-schedule-item.daily-schedule-item_lecture.daily-schedule-item_is-going {
   &::before {
-    color: var(--dark-blue-translucent);
-    background-color: var(--dark-blue);
+    color: var(--color-lecture-shadow);
+    background-color: var(--color-lecture-accent);
   }
 }
 
 .daily-schedule-item.daily-schedule-item_another.daily-schedule-item_is-going {
   &::before {
-    color: var(--dark-ginger-translucent);
-    background-color: var(--dark-ginger);
+    color: var(--color-another-shadow);
+    background-color: var(--color-another-background);
   }
 }
 
 @keyframes radial-pulse {
   0% { box-shadow: 0 0 0 0px currentColor; }
-  100% { box-shadow: 0 0 0 0.22em rgba(211, 196, 196, 0); }
+  100% { box-shadow: 0 0 0 0.22em var(--color-going-class-pulse) }
 }
 
 @media (max-width: 1140px) {

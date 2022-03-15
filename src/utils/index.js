@@ -5,6 +5,7 @@ import scrollToNthChild from "./scroll-to-hth-child";
 import createSubgroupString from "./create-subgroup-string";
 import getNearestStudyDayIdx from "./get-nearest-study-day-idx";
 import isCurrentTimeInInterval from "./is-current-time-in-interval";
+import getDifferenceWithCurrentTime from "./get-difference-wtih-current-time";
 
 export {
   blockClick,
@@ -13,5 +14,6 @@ export {
   scrollToNthChild,
   createSubgroupString,
   getNearestStudyDayIdx,
-  isCurrentTimeInInterval
+  isCurrentTimeInInterval,
+  getDifferenceWithCurrentTime
 };

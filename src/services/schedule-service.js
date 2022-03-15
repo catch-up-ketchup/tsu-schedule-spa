@@ -15,6 +15,7 @@ class ScheduleService {
     }
 
     const data = await response.json();
+
     return {
       ...data,
       schedule: this._transformSchedule(data.schedule)
@@ -39,5 +40,5 @@ class ScheduleService {
   }
 }
 
-const scheduleService = new ScheduleService('https://tsu-schedule-api.xyz/schedule/')
+const scheduleService = new ScheduleService('https://tsu-schedule-api.xyz/schedule/');
 export default scheduleService;

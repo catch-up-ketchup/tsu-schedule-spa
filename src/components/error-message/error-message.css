@@ -10,7 +10,7 @@
 .error-message__content {
   padding: 1em 2em;
   display: inline-block;
-  border: 2px solid var(--main-red);
+  border: 2px solid var(--color-error);
   border-radius: 10px;
 }
 .error-message__heading {
@@ -19,7 +19,7 @@
   line-height: 1.275em;
   display: inline-flex;
   align-items: center;
-  color: var(--main-red);
+  color: var(--color-error);
 }
 .error-message__title {
   font-weight: 700;
@@ -31,7 +31,7 @@
   font-size: calc(16px + 4 * ((100vw - 320px) / 1600));
   font-weight: 500;
   line-height: 1.66em;
-  color: var(--dark-gray);
+  color: var(--color-class-info);
 }
 
 @media (max-width: 585px) {

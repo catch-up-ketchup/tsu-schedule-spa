@@ -1,5 +1,5 @@
 .search-form__wrapper {
-  border-bottom: 1px solid var(--extra-dark-gray);
+  border-bottom: 1px solid var(--color-search-form-border);
 }
 .search-form__content {
   max-width: 610px;
