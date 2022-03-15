@@ -6,10 +6,7 @@ const transformDate = (stringDate) => {
 
 const getNearestStudyDayIdx = (array) => {
   const today = (new Date()).valueOf();
-  const nextDays = array.filter(item => {
-    return transformDate(item.day.date) >= today
-  });
-  return array.indexOf(nextDays[0]);
+  return array.findIndex(item => transformDate(item.day.date) >= today)
 }
 
 export default getNearestStudyDayIdx;

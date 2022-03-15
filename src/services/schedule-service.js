@@ -39,6 +39,5 @@ class ScheduleService {
   }
 }
 
-// const scheduleService = new ScheduleService('http://127.0.0.1:5000/schedule/');
-const scheduleService = new ScheduleService('https://tsu-schedule-api.herokuapp.com/schedule/')
+const scheduleService = new ScheduleService('https://tsu-schedule-api.xyz/schedule/')
 export default scheduleService;

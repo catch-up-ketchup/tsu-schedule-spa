@@ -79,28 +79,37 @@
     }
 
     &__day {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-
-      padding-right: 0;
-      padding-bottom: 0.3em;
-      margin-right: 0;
       margin-bottom: 1.2em;
+
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
 
       text-align: left;
       border-right: none;
-      border-bottom: 2px solid var(--extra-light-gray);
+
+      padding: 0.6em 30px 0;
 
       top: 0;
-      padding-top: 0.6em;
       background-color: var(--main-backbround-color);
 
+      &-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        padding-bottom: 0.6em;
+
+        border-bottom: 2px solid var(--extra-light-gray);
+      }
     }
 
     &__day-of-week, &__week-type {
       font-size: 1.2em;
       margin-right: 0.5em;
+    }
+
+    &__day-of-week, &__week-type, &__date {
+      line-height: 1em;
     }
   }
 }
@@ -124,6 +133,14 @@
       &::before, &::after {
         font-weight: 400;
       }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .daily-schedule {
+    &__day {
+      padding: 0.6em 12px 0;
     }
   }
 }
