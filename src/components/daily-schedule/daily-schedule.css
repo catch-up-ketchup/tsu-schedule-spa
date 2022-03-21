@@ -52,10 +52,10 @@
 @media (max-width: 1300px) {
   .daily-schedule__day {
     margin-right: 1.5em;
-    padding-right: 0.1em;
+    padding-right: 0.7em;
   }
 }
-@media (max-width: 1140px) {
+@media (max-width: 1200px) {
   .daily-schedule {
     flex-direction: column;
   }
@@ -76,6 +76,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap;
     padding-bottom: 0.6em;
     border-bottom: 2px solid var(--color-day-border);
   }

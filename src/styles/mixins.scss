@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import "_utils";
 
 //-------------------------------- adaptive font --------------------------------
@@ -22,6 +23,6 @@ $layout-width: 1920;
   @if $line-height {
     line-height: $line-height;
   } @else {
-    line-height: #{get-line-height($font) / $pc-size}em;
+    line-height: #{math.div(get-line-height($font), $pc-size)}em;
   }
 }

@@ -9,6 +9,7 @@
 }
 .daily-schedule-item__row:first-child {
   margin-bottom: 1.48em;
+  flex-wrap: wrap;
 }
 .daily-schedule-item__subject {
   font-size: calc(17px + 7 * ((100vw - 320px) / 1600));
@@ -110,6 +111,7 @@
 @media (max-width: 1140px) {
   .daily-schedule-item {
     min-width: auto;
+    padding: 1.2em 2.27em;
   }
   .daily-schedule-item_is-going::before {
     width: 0.36em;

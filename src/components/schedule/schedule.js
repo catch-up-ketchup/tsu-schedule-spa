@@ -5,10 +5,7 @@ import { v4 } from "uuid";
 
 import DailySchedule from "../daily-schedule";
 import { scrollToNthChild, getNearestStudyDayIdx } from '../../utils';
-import {
-  setTimeoutsToUpdateCurrentClassIndex,
-  resetCurrentClassStateAndTimeouts
-} from "../../features";
+import { setTimeoutsToUpdateCurrentClassIndex, resetCurrentClassStateAndTimeouts } from "../../features";
 
 import './schedule.scss';
 
@@ -19,9 +16,7 @@ const Schedule = ({ schedule, group }) => {
 
   useEffect(() => {
     dispatch(setTimeoutsToUpdateCurrentClassIndex());
-    return () => {
-      dispatch(resetCurrentClassStateAndTimeouts());
-    }
+    return () => dispatch(resetCurrentClassStateAndTimeouts());
   }, [dispatch]);
 
   const handleClick = useCallback(() => {

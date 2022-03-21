@@ -1,12 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { isEqual } from "lodash/lang";
+import * as workerTimers from 'worker-timers';
 
 import { getDifferenceWithCurrentTime, isToday } from "../utils";
 
 
 export const setTimeoutsToUpdateCurrentClassIndex = () => {
   return (dispatch, getState) => {
-    const dailySchedule = getState().schedule.schedule.find(item => isToday(item.day.date)).dailySchedule;
+    const dailySchedule = getState().schedule.schedule.find(item => isToday(item.day.date))?.dailySchedule;
     if (!dailySchedule) {
       return;
     }
@@ -15,7 +16,7 @@ export const setTimeoutsToUpdateCurrentClassIndex = () => {
 
     const setCurrentClassUpdateTimeout = (item, time, action) => {
       const timeout = getDifferenceWithCurrentTime(time);
-      const timeoutID = setTimeout(() => {
+      const timeoutID = workerTimers.setTimeout(() => {
         const newIndex = dailySchedule.findIndex(dailyItem => isEqual(item, dailyItem));
         dispatch(action(newIndex));
       }, timeout);
@@ -23,8 +24,8 @@ export const setTimeoutsToUpdateCurrentClassIndex = () => {
     };
 
     remainingClasses.forEach(item => {
-      setCurrentClassUpdateTimeout(item, item.time.start, setNewIndex);
-      setCurrentClassUpdateTimeout(item, item.time.end, setDefaultIndex);
+      setCurrentClassUpdateTimeout(item, item.time.start, setIndex);
+      setCurrentClassUpdateTimeout(item, item.time.end, () => setIndex(-1));
     });
   };
 };
@@ -32,9 +33,8 @@ export const setTimeoutsToUpdateCurrentClassIndex = () => {
 export const resetCurrentClassStateAndTimeouts = () => {
   return (dispatch, getState) => {
     const { timeoutIDs } = getState().currentClass;
-    timeoutIDs.forEach(timeoutID => clearTimeout(timeoutID));
-    const actions = [setDefaultIndex, setDefaultTimeoutIDs];
-    actions.forEach(action => dispatch(action()));
+    timeoutIDs.forEach(timeoutID => workerTimers.clearTimeout(timeoutID));
+    dispatch(resetState());
   };
 };
 
@@ -48,23 +48,19 @@ const currentClassSlice = createSlice({
   initialState,
 
   reducers: {
-    setNewIndex: (state, action) => {
+    setIndex: (state, action) => {
       state.index = action.payload;
+      state.timeoutIDs.shift();
     },
 
     addTimeoutID: (state, action) => {
       state.timeoutIDs.push(action.payload);
     },
 
-    setDefaultIndex: (state) => {
-      state.index = initialState.index;
-    },
-
-    setDefaultTimeoutIDs: (state) => {
-      state.timeoutIDs = initialState.timeoutIDs;
-    }
+    resetState: () => initialState
   }
 });
 
+const { setIndex, addTimeoutID, resetState } = currentClassSlice.actions;
+
 export default currentClassSlice.reducer;
-export const { setNewIndex, setDefaultIndex, addTimeoutID, setDefaultTimeoutIDs } = currentClassSlice.actions;

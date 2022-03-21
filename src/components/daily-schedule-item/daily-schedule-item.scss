@@ -17,6 +17,7 @@
   &__row {
     &:first-child {
       margin-bottom: 1.48em;
+      flex-wrap: wrap;
     }
   }
 
@@ -144,6 +145,8 @@
 @media (max-width: 1140px) {
   .daily-schedule-item {
     min-width: auto;
+
+    padding: 1.2em 2.27em;
 
     &_is-going {
       &::before {
