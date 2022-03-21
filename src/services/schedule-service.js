@@ -1,4 +1,5 @@
 import { createSubgroupString } from '../utils';
+import stubSchedule from "../stub-schedule";
 
 
 class ScheduleService {
@@ -21,6 +22,15 @@ class ScheduleService {
       schedule: this._transformSchedule(data.schedule)
     };
   };
+
+  getStubSchedule = async (group) => {
+    return new Promise((resolve, reject) => {
+      if (Math.random() < 0.8) {
+        resolve(stubSchedule);
+      }
+      reject('Error');
+    })
+  }
 
   _transformSchedule(schedule) {
     return schedule.map(item => {

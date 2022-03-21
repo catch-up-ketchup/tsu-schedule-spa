@@ -25,12 +25,6 @@ const scheduleSlice = createSlice({
   name: 'schedule',
   initialState,
 
-  reducers: {
-    setGoingClassIndex: (state, action) => {
-      state.goingClassIndex = action.payload;
-    }
-  },
-
   extraReducers: {
     [fetchSchedule.pending]: (state) => {
       state.schedule = [];

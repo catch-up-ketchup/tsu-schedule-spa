@@ -28,7 +28,11 @@ const SearchForm = () => {
               Введите номер группы, чтобы узнать расписание</h2>
             <div className="search-form__row">
               <div className="search-form__input">
-                <InputField register={register} name={inputName} errors={errors} setValue={setValue}/>
+                <InputField
+                  register={register}
+                  name={inputName}
+                  errors={errors}
+                  setValue={setValue}/>
               </div>
             </div>
             <button className="search-form__button blue-button" type="submit">

@@ -1,23 +1,14 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback } from 'react';
 import { FiAnchor } from "react-icons/all";
-import { useDispatch } from "react-redux";
 import { v4 } from "uuid";
 
 import DailySchedule from "../daily-schedule";
 import { scrollToNthChild, getNearestStudyDayIdx } from '../../utils';
-import { setTimeoutsToUpdateCurrentClassIndex, resetCurrentClassStateAndTimeouts } from "../../features";
 
 import './schedule.scss';
 
 
 const Schedule = ({ schedule, group }) => {
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(setTimeoutsToUpdateCurrentClassIndex());
-    return () => dispatch(resetCurrentClassStateAndTimeouts());
-  }, [dispatch]);
 
   const handleClick = useCallback(() => {
     const idx = getNearestStudyDayIdx(schedule);
