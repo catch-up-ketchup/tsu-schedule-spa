@@ -118,7 +118,7 @@
 }
 @media (max-width: 767.98px) {
   .daily-schedule-item {
-    padding: 0.8em 1.2em 1.1em;
+    padding: 0.7em 1.2em 1em;
   }
   .daily-schedule-item_is-going::before {
     width: 0.4em;
@@ -130,10 +130,10 @@
     border-radius: 15px;
   }
   .daily-schedule-item__row:first-child {
-    margin-bottom: 1.1em;
+    margin-bottom: 1em;
   }
   .daily-schedule-item__info {
-    margin-bottom: 0.3em;
+    margin-bottom: 0.15em;
   }
   .daily-schedule-item_is-going::before {
     width: 0.4em;

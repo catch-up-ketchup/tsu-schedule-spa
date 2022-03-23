@@ -1,7 +1,13 @@
-import scheduleReducer, { fetchSchedule, updateGoingClassIndex } from "./schedule-slice";
+import scheduleReducer, { fetchSchedule } from "./schedule-slice";
+import currentClassReducer, {
+  setTimeoutsToUpdateCurrentClassIndex,
+  resetCurrentClassStateAndTimeouts
+} from "./current-class-slice";
 
 export {
   scheduleReducer,
   fetchSchedule,
-  updateGoingClassIndex
+  currentClassReducer,
+  setTimeoutsToUpdateCurrentClassIndex,
+  resetCurrentClassStateAndTimeouts
 };

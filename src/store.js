@@ -1,11 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { scheduleReducer } from './features';
+import { scheduleReducer, currentClassReducer } from './features';
 
 
 const store = configureStore({
   reducer: {
-    schedule: scheduleReducer
+    schedule: scheduleReducer,
+    currentClass: currentClassReducer
   }
 });
 

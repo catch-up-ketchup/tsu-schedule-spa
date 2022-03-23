@@ -3,14 +3,14 @@ import {useSelector } from "react-redux";
 import { v4 } from 'uuid';
 
 import DailyScheduleItem from "../daily-schedule-item";
-import { isTodayDate } from "../../utils";
+import { isToday } from "../../utils";
 
 import './daily-schedule.scss';
 
 
 const DailySchedule = ({ day: { dayOfWeek, date, weekType }, dailySchedule }) => {
 
-  const { goingClassIndex } = useSelector(state => state.schedule);
+  const { index } = useSelector(state => state.currentClass);
 
   return (
     <li className="daily-schedule">
@@ -25,7 +25,7 @@ const DailySchedule = ({ day: { dayOfWeek, date, weekType }, dailySchedule }) =>
         {dailySchedule.map((item, idx) => (
           <DailyScheduleItem
             {...item}
-            isGoing={idx === goingClassIndex && isTodayDate(date)}
+            isGoing={idx === index && isToday(date)}
             key={v4()}
           />
         ))}

@@ -4,6 +4,9 @@
   display: flex;
 
   margin-bottom: 4.8em;
+  &:last-child {
+    margin-bottom: 1.2em;
+  }
 
   width: 100%;
 
@@ -117,6 +120,9 @@
 @media (max-width: 767.98px) {
   .daily-schedule {
     margin-bottom: 3.5em;
+    &:last-child {
+      margin-bottom: 0.65em;
+    }
 
     &__day {
       margin-bottom: 0.7em;

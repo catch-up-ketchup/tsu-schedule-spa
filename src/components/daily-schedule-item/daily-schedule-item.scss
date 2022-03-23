@@ -157,7 +157,7 @@
 
 @media (max-width: 767.98px) {
   .daily-schedule-item {
-    padding: 0.8em 1.2em 1.1em;
+    padding: 0.7em 1.2em 1em;
 
     &_is-going {
       &::before {
@@ -175,12 +175,12 @@
 
     &__row {
       &:first-child {
-        margin-bottom: 1.1em;
+        margin-bottom: 1em;
       }
     }
 
     &__info {
-      margin-bottom: 0.3em;
+      margin-bottom: 0.15em;
     }
 
     &_is-going {

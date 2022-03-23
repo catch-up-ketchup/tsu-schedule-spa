@@ -1,4 +1,4 @@
-const isTodayDate = (stringDate) => {
+const isToday = (stringDate) => {
   const today = new Date();
 
   const temp = stringDate.split('.').map(item => Number(item));
@@ -7,4 +7,4 @@ const isTodayDate = (stringDate) => {
   return today.getDate() === date.getDate() && today.getMonth() === date.getMonth() && today.getFullYear() === date.getFullYear();
 };
 
-export default isTodayDate;
+export default isToday;
