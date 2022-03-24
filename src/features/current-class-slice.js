@@ -6,7 +6,7 @@ import { getDifferenceWithCurrentTime, isToday } from "../utils";
 
 export const setTimeoutsToUpdateCurrentClassIndex = () => {
   return (dispatch, getState) => {
-    const dailySchedule = getState().schedule.schedule.find(item => isToday(item.day.date)).dailySchedule;
+    const dailySchedule = getState().schedule.schedule.find(item => isToday(item.day.date))?.dailySchedule;
     if (!dailySchedule) {
       return;
     }
