@@ -133,7 +133,7 @@
 .daily-schedule-item.daily-schedule-item_another.daily-schedule-item_is-going {
   &::before {
     color: var(--color-another-shadow);
-    background-color: var(--color-another-background);
+    background-color: var(--color-another-accent);
   }
 }
 

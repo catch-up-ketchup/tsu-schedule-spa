@@ -1,12 +1,12 @@
 :root {
   @media (prefers-color-scheme: dark) {
-    --color-day-border: #C4C4C4;
-    --color-light-text: #bbbaba;
-    --color-class-info: #d5d4d4;
-    --color-search-form-border: rgba(255, 255, 255, 0.40);
+    --color-day-border: #7c7f91;
+    --color-light-text: #c1c4d2;
+    --color-class-info: #e0e0e0;
+    --color-search-form-border: #33374b;
 
-    --color-main-background: #202124;
-    --color-main-text: #f3f1f1;
+    --color-main-background: #212435;
+    --color-main-text: #edf2f6;
     --color-button-text: #f1e9e9;
 
     --color-main-extra-light: #6281FF;
@@ -15,21 +15,21 @@
 
     --color-error: #c94552;
 
-    --color-practice-background: rgba(155, 100, 245, 0.3);
-    --color-practice-accent: rgb(164, 119, 236);
+    --color-practice-background: rgba(155, 100, 245, 0.35);
+    --color-practice-accent: rgb(176, 132, 248);
     --color-practice-shadow: rgba(163, 151, 215, 0.6);
 
     --color-lecture-background: rgba(58, 128, 225, 0.45);
     --color-lecture-accent: rgb(139, 179, 238);
     --color-lecture-shadow: rgba(143, 170, 218, 0.5);
 
-    --color-laboratory-work-background: rgba(42, 218, 115, 0.3);
+    --color-laboratory-work-background: rgba(42, 218, 115, 0.35);
     --color-laboratory-work-accent: rgb(98, 190, 135);
     --color-laboratory-work-shadow: rgba(150, 208, 155, 0.5);
 
-    --color-another-background: #F7EDDA;
-    --color-another-accent: #C08D28;
-    --color-another-shadow: rgba(192, 141, 40, 0.5);
+    --color-another-background: rgba(187, 137, 55, 0.7);
+    --color-another-accent: rgb(245, 202, 134);
+    --color-another-shadow: rgba(248, 168, 10, 0.5);
 
     --color-going-class-pulse: rgba(211, 196, 196, 0);
 
