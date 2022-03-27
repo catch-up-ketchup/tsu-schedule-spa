@@ -92,7 +92,7 @@
 
       padding: 0.6em 30px 0;
 
-      top: 0;
+      top: 0px;
       background-color: var(--color-main-background);
 
       &-container {
@@ -147,7 +147,8 @@
 @media (max-width: 575.98px) {
   .daily-schedule {
     &__day {
-      padding: 0.6em 12px 0;
+      padding: 12px 12px 0;
+      top: -4px;
     }
   }
 }

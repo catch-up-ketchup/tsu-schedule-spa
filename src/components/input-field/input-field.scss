@@ -37,10 +37,6 @@
 
     &::placeholder {
       color: var(--color-day-border);
-
-      @media (prefers-color-scheme: dark) {
-        color: var(--color-search-form-border);
-      }
     }
 
     &:focus {

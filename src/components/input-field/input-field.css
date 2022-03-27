@@ -29,11 +29,6 @@
 .input-field__input::placeholder {
   color: var(--color-day-border);
 }
-@media (prefers-color-scheme: dark) {
-  .input-field__input::placeholder {
-    color: var(--color-search-form-border);
-  }
-}
 .input-field__input:focus {
   border: 1px solid var(--color-main-extra-light);
 }
