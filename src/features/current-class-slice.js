@@ -4,7 +4,7 @@ import * as workerTimers from 'worker-timers';
 
 import { getDifferenceWithCurrentTime, isToday } from "../utils";
 
-
+// comment
 export const setTimeoutsToUpdateCurrentClassIndex = () => {
   return (dispatch, getState) => {
     const dailySchedule = getState().schedule.schedule.find(item => isToday(item.day.date))?.dailySchedule;
