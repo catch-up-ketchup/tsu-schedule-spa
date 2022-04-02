@@ -4,11 +4,11 @@
   flex-direction: column;
   justify-content: space-between;
   min-width: 480px;
-  padding: 1.5em 3.27em;
+  padding: 1.2em 2.8em 1.5em;
   border-radius: 27px;
 }
 .daily-schedule-item__row:first-child {
-  margin-bottom: 1.48em;
+  margin-bottom: 1.28em;
   flex-wrap: wrap;
 }
 .daily-schedule-item__subject {
@@ -23,14 +23,19 @@
 .daily-schedule-item__time, .daily-schedule-item__auditorium, .daily-schedule-item__teacher {
   display: flex;
   align-items: center;
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
-  font-weight: 500;
-  line-height: 1.66em;
+  font-size: calc(13.5px + 2.5 * ((100vw - 320px) / 1600));
   font-weight: 400;
+  line-height: 1.66em;
   color: var(--color-class-info);
 }
 .daily-schedule-item__time svg, .daily-schedule-item__auditorium svg, .daily-schedule-item__teacher svg {
   margin-right: 7px;
+}
+.daily-schedule-item__type {
+  font-size: calc(13.5px + 2.5 * ((100vw - 320px) / 1600));
+  font-weight: 400;
+  line-height: 1.66em;
+  line-height: 1em;
 }
 .daily-schedule-item__auditorium svg {
   margin-bottom: 2px;
@@ -112,6 +117,7 @@
   .daily-schedule-item {
     min-width: auto;
     padding: 1.2em 2.27em;
+    border-radius: 20px;
   }
   .daily-schedule-item_is-going::before {
     width: 0.36em;
@@ -120,7 +126,7 @@
 }
 @media (max-width: 767.98px) {
   .daily-schedule-item {
-    padding: 0.7em 1.2em 1em;
+    padding: 1.2em 1.8em;
   }
   .daily-schedule-item_is-going::before {
     width: 0.4em;
@@ -129,13 +135,14 @@
 }
 @media (max-width: 575.98px) {
   .daily-schedule-item {
+    padding: 0.7em 1.1em 0.9em;
     border-radius: 15px;
   }
   .daily-schedule-item__row:first-child {
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
   }
   .daily-schedule-item__info {
-    margin-bottom: 0.15em;
+    margin-bottom: 0.1em;
   }
   .daily-schedule-item_is-going::before {
     width: 0.4em;

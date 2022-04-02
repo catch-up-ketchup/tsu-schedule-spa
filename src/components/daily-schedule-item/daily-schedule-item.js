@@ -15,7 +15,7 @@ const DailyScheduleItem = (
 
   useInterval(() => {
     setIsGoing(isCurrentTimeInInterval(start, end));
-  }, 3000, true, today);
+  }, 30000, true, today);
 
   const className = useMemo(() => {
     let defaultClassName = 'daily-schedule-item ';

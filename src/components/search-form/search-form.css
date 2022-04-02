@@ -23,7 +23,7 @@
 }
 .search-form__button {
   padding: 0.61em 2em;
-  font-size: calc(15px + 3 * ((100vw - 320px) / 1600));
+  font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
   font-weight: 700;
   line-height: 1.66em;
   border-radius: 80px;

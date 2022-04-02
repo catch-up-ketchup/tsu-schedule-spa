@@ -5,7 +5,7 @@
 .input-field__label {
   display: block;
   margin-bottom: 3px;
-  font-size: calc(15px + 3 * ((100vw - 320px) / 1600));
+  font-size: calc(16px + 4 * ((100vw - 320px) / 1600));
   font-weight: 500;
   line-height: 1.66em;
   transition: color var(--animation-duration);

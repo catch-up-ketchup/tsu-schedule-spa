@@ -10,13 +10,13 @@
 
   min-width: 480px;
 
-  padding: 1.5em 3.27em;
+  padding: 1.2em 2.8em 1.5em;
 
   border-radius: 27px;
 
   &__row {
     &:first-child {
-      margin-bottom: 1.48em;
+      margin-bottom: 1.28em;
       flex-wrap: wrap;
     }
   }
@@ -34,14 +34,18 @@
     display: flex;
     align-items: center;
 
-    @include adaptive-font(xs);
-    font-weight: 400;
+    @include adaptive-font(xs, 400);
 
     color: var(--color-class-info);
 
     svg {
       margin-right: 7px;
     }
+  }
+
+  &__type {
+    @include adaptive-font(xs, 400);
+    line-height: 1em;
   }
 
   &__auditorium {
@@ -147,6 +151,7 @@
     min-width: auto;
 
     padding: 1.2em 2.27em;
+    border-radius: 20px;
 
     &_is-going {
       &::before {
@@ -160,7 +165,7 @@
 
 @media (max-width: 767.98px) {
   .daily-schedule-item {
-    padding: 0.7em 1.2em 1em;
+    padding: 1.2em 1.8em;
 
     &_is-going {
       &::before {
@@ -174,16 +179,17 @@
 
 @media (max-width: 575.98px) {
   .daily-schedule-item {
+    padding: 0.7em 1.1em 0.9em;
     border-radius: 15px;
 
     &__row {
       &:first-child {
-        margin-bottom: 1em;
+        margin-bottom: 0.8em;
       }
     }
 
     &__info {
-      margin-bottom: 0.15em;
+      margin-bottom: 0.1em;
     }
 
     &_is-going {

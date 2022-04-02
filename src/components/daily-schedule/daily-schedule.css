@@ -19,7 +19,7 @@
 }
 .daily-schedule__day-of-week, .daily-schedule__week-type {
   display: block;
-  font-size: calc(15px + 3 * ((100vw - 320px) / 1600));
+  font-size: calc(14px + 4 * ((100vw - 320px) / 1600));
   font-weight: 500;
   line-height: 1.66em;
   color: var(--color-light-text);
@@ -102,7 +102,7 @@
     display: block;
   }
   .daily-schedule__list li:not(:last-child) {
-    margin-bottom: 0.65em;
+    margin-bottom: 0.55em;
   }
   .daily-schedule__week-type::before, .daily-schedule__week-type::after {
     font-weight: 400;

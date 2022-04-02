@@ -9,7 +9,7 @@
 
     margin-bottom: 3px;
 
-    @include adaptive-font(s);
+    @include adaptive-font(m);
 
     transition: color var(--animation-duration);
     color: var(--color-light-text);
