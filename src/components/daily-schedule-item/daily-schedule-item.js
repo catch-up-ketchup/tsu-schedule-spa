@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
-import useInterval from 'use-interval';
 import { AiOutlineClockCircle, BsDoorClosed, FiUser } from "react-icons/all";
 
+import { useInterval } from '../../hooks';
 import { isCurrentTimeInInterval } from '../../utils';
 
 import './daily-schedule-item.scss';
@@ -14,11 +14,8 @@ const DailyScheduleItem = (
   const [isGoing, setIsGoing] = useState(false);
 
   useInterval(() => {
-      if (today) {
-        setIsGoing(isCurrentTimeInInterval(start, end));
-      }
-    }, 30000, true
-  );
+    setIsGoing(isCurrentTimeInInterval(start, end));
+  }, 3000, true, today);
 
   const className = useMemo(() => {
     let defaultClassName = 'daily-schedule-item ';
