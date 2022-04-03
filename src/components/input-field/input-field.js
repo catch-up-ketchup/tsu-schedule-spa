@@ -23,7 +23,7 @@ const InputField = ({ name, register, errors, setValue }) => {
         {
           ...register(name, {
             required: true,
-            pattern: /^([1-9][0-9]{5})\b(-[А-Я]{2})?/
+            pattern: /^([1-9][0-9]{4})/
           })
         }
       />
