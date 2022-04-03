@@ -9,7 +9,7 @@ class ScheduleService {
   }
 
   getSchedule = async (group) => {
-    const response = await fetch(`${this._baseUrl}${group}`);
+    const response = await fetch(`${this._baseUrl}/?group=${group}`);
 
     if (!response.ok) {
       throw new Error('Something went wrong with fetch schedule');
@@ -50,5 +50,5 @@ class ScheduleService {
   }
 }
 
-const scheduleService = new ScheduleService('https://tsu-schedule-api.xyz/schedule/');
+const scheduleService = new ScheduleService('https://tsu-schedule-api.xyz/schedule');
 export default scheduleService;
